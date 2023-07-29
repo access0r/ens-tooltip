@@ -86,42 +86,44 @@ function createTooltip(data, config) {
         textSpan.className = 'textRecord';
 
         var text = data[key];
-        var a = document.createElement('a');
-        a.textContent = text;
+        if (text) { // Add this check
+            var a = document.createElement('a'); // Define 'a' here
+            a.textContent = text;
 
-        if (text.length > 43) {
-            text = text.substring(0, 43) + '...';
-            var longTextTooltip = document.createElement('div');
-            longTextTooltip.textContent = data[key];
-            longTextTooltip.style.display = 'none';
-            textSpan.appendChild(longTextTooltip);
-            textSpan.onmouseover = function() {
-                longTextTooltip.style.display = 'block';
-            }
-            textSpan.onmouseout = function() {
+            if (text.length > 43) {
+                text = text.substring(0, 43) + '...';
+                var longTextTooltip = document.createElement('div');
+                longTextTooltip.textContent = data[key];
                 longTextTooltip.style.display = 'none';
+                textSpan.appendChild(longTextTooltip);
+                textSpan.onmouseover = function() {
+                    longTextTooltip.style.display = 'block';
+                }
+                textSpan.onmouseout = function() {
+                    longTextTooltip.style.display = 'none';
+                }
             }
-        }
 
-        if (key === 'twitter') {
-            a.href = 'https://twitter.com/' + text;
-        } else if (key === 'reddit') {
-            a.href = 'https://reddit.com/user/' + text;
-        } else if (key === 'telegram') {
-            a.href = 'https://t.me/' + text;
-        } else if (key === 'email') {
-            a.href = 'mailto:' + text;
-        } else if (key === 'address') {
-            a.href = 'https://etherscan.io/address/' + text;
-        } else if (/^(http|https):\/\//.test(data[key])) {
-            a.href = data[key];
-            a.textContent = 'Link to ' + key;
-        } else {
-            textSpan.textContent = text;
-        }
+            if (key === 'twitter') {
+                a.href = 'https://twitter.com/' + text;
+            } else if (key === 'reddit') {
+                a.href = 'https://reddit.com/user/' + text;
+            } else if (key === 'telegram') {
+                a.href = 'https://t.me/' + text;
+            } else if (key === 'email') {
+                a.href = 'mailto:' + text;
+            } else if (key === 'address') {
+                a.href = 'https://etherscan.io/address/' + text;
+            } else if (/^(http|https):\/\//.test(data[key])) {
+                a.href = data[key];
+                a.textContent = 'Link to ' + key;
+            } else {
+                textSpan.textContent = text;
+            }
 
-        if (a.href) {
-            textSpan.appendChild(a);
+            if (a.href) {
+                textSpan.appendChild(a);
+            }
         }
 
         recordDiv.appendChild(titleDiv);
