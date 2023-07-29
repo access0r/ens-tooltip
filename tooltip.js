@@ -61,6 +61,11 @@ function createTooltip(data, config) {
     tooltip.className = 'tooltip';
     Object.assign(tooltip.style, config.tooltip);
 
+    // Stop click events from propagating to the document
+    tooltip.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
     if (data.avatar) {
         var avatar = document.createElement('img');
         avatar.src = data.avatar;
@@ -160,4 +165,12 @@ function addHoverEvent(config) {
             }
         });
     }
+
+    // Add click event to the entire document
+    document.addEventListener('click', function(e) {
+        if (tooltip) {
+            tooltip.remove();
+            tooltip = null;
+        }
+    });
 }
