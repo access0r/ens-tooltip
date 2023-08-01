@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Dank Mono';
+    src: url('path/to/DankMono-Regular.ttf') format('truetype');
+}
+
+.tooltip {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: auto;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Dank Mono', sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.ensName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.nameRecord {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.nameRecords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sendButton {
+    width: 100%;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.body {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+}
