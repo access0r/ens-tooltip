@@ -1,0 +1,41 @@
+html {}
+
+.dataTitle {
+    padding-left: 20px;
+}
+
+#contentHash {}
+
+.recordContainer {
+    background-color: rgb(204, 210, 220);
+    margin-top: 2px;
+    padding: 2px;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#contentHash {}
+
+.textRecord {
+    padding-left: 15px;
+}
+
+a {}
+
+#description {}
+
+#email {}
+
+#ens {}
+
+#ens_primary {}
+
+#github {}
+
+.textRecord {}
+
+#header {}
+
+#twitter {}
+
+#url {}
