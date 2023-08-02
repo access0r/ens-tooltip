@@ -1,5 +1,5 @@
 ENS Tooltip Plugin
-( still working. almost done )
+needs to be styled.
 This is a lightweight and easily configurable plugin for highlighting and fetching Ethereum Name Service (ENS) data on a webpage. The plugin identifies ENS names in the text of a webpage, highlights them, and fetches their associated data from the ENS registry when hovered over. The fetched data is displayed in a tooltip next to the ENS name.
 Features
 
