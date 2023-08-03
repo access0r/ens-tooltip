@@ -1,0 +1,40 @@
+{
+    "tooltip": {
+        "borderRadius": "5px",
+        "padding": "10px",
+        "position": "absolute"
+    },
+    "recordContainer": {
+        "marginBottom": "10px"
+    },
+    "dataTitle": {
+        "fontWeight": "bold",
+        "marginBottom": "5px"
+    },
+    "displayOptions": {
+        "showAddress": false,
+        "showAvatar": true,
+        "showContentHash": true,
+        "showDelegateHere": true,
+        "showDescription": true,
+        "showDiscord": true,
+        "showEmail": true,
+        "showEns": true,
+        "showEnsPrimary": true,
+        "showEthEnsDelegate": true,
+        "showGithub": true,
+        "showHeader": true,
+        "showHeaderUrl": true,
+        "showHuman": true,
+        "showKeywords": true,
+        "showNotice": true,
+        "showPoap": true,
+        "showReddit": true,
+        "showSnapshot": true,
+        "showTelegram": true,
+        "showThemeAccentColors": true,
+        "showThemePrimaryColor": true,
+        "showTwitter": true,
+        "showUrl": true
+    }
+}
