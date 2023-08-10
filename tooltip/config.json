@@ -1,10 +1,11 @@
 {
     "tooltip": {
+        "backgroundColor": "white",
         "borderRadius": "5px",
         "padding": "10px",
         "position": "absolute"
     },
-    "recordContainer": {
+    "nameRecord": {
         "marginBottom": "10px"
     },
     "dataTitle": {
@@ -12,9 +13,10 @@
         "marginBottom": "5px"
     },
     "displayOptions": {
+        "showHover": true,
         "showAddress": false,
-        "showAvatar": true,
-        "showContentHash": true,
+        "showAvatar": false,
+        "showContentHash": false,
         "showDelegateHere": true,
         "showDescription": true,
         "showDiscord": true,

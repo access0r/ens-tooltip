@@ -92,9 +92,13 @@ function createTooltip(data, config) {
         tooltip.className = 'tooltip';
         Object.assign(tooltip.style, config.tooltip);
 
-        // Stop click events from propagating to the document
         tooltip.addEventListener('click', function(e) {
             e.stopPropagation();
+
+            var tipTitle = document.createElement('div');
+            tipTitle.className = 'tooltip-title';
+            tipTitle.appendChild(document.createTextNode);
+            tipTitle.textContent = 'ens tooltip';
         });
 
         if (data.avatar && config.displayOptions.avatar !== false) {
@@ -128,8 +132,8 @@ function createTooltip(data, config) {
                 var a = document.createElement('a'); // Define 'a' here
                 a.textContent = text;
 
-                if (text.length > 43) {
-                    text = text.substring(0, 43) + '...';
+                if (text.length > 20) {
+                    text = text.substring(0, 20) + '...';
                     var longTextTooltip = document.createElement('div');
                     longTextTooltip.textContent = data[key];
                     longTextTooltip.style.display = 'none';
